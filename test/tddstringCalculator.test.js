@@ -8,4 +8,10 @@ describe("String Calculator", () => {
         });
     });
 
+    describe("Test Case 2: Single Number", () => {
+        test("returns number for a single number", () => {
+            expect(add("5")).toBe(5);
+        });
+    });
+
 });
