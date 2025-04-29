@@ -20,4 +20,10 @@ describe("String Calculator", () => {
         });
     });
 
+    describe("Test Case 4: Newline as delimiter", () => {
+        test("handles new lines as delimiter", () => {
+            expect(add("1\n2,3")).toBe(6);
+        });
+    });
+
 });
