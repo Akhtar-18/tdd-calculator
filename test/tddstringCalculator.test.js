@@ -38,4 +38,16 @@ describe("String Calculator", () => {
         });
     });
 
+    describe("Test Case 7: Ignore numbers > 1000", () => {
+        test("ignores numbers greater than 1000", () => {
+            expect(add("2,1001")).toBe(2);
+        });
+    });
+
+    describe("Test Case 8: Delimiters of any length", () => {
+        test("supports delimiters of any length", () => {
+            expect(add("//[***]\n1***2***3")).toBe(6);
+        });
+    });
+
 });
