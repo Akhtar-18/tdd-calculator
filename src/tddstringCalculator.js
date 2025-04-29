@@ -16,6 +16,12 @@ function add(numbers) {
 
   const regex = new RegExp(delimiters.join("|"));
   const numArray = numbers.split(regex).map((n) => parseInt(n));
+  const negatives = numArray.filter((n) => n < 0);
+
+  if (negatives.length > 0) {
+    throw new Error(`Negatives not allowed: ${negatives.join(", ")}`);
+  }
+
   return numArray.reduce((acc, curr) => acc + curr, 0);
 
 }
