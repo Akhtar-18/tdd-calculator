@@ -50,4 +50,10 @@ describe("String Calculator", () => {
         });
     });
 
+    describe("Test Case 9: Multiple custom delimiters", () => {
+        test("supports multiple custom delimiters", () => {
+            expect(add("//[*][%]\n1*2%3")).toBe(6);
+        });
+    });
+
 });
