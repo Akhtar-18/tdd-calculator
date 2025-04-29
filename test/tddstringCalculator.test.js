@@ -26,4 +26,10 @@ describe("String Calculator", () => {
         });
     });
 
+    describe("Test Case 5: Custom single character delimiter", () => {
+        test("supports custom single character delimiter", () => {
+            expect(add("//;\n1;2")).toBe(3);
+        });
+    });
+
 });
