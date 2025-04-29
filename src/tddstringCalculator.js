@@ -6,6 +6,11 @@ function add(numbers) {
     return parseInt(numbers);
   }
 
+  let delimiters = [",", "\\n"];
+  const regex = new RegExp(delimiters.join("|"));
+  const numArray = numbers.split(regex).map((n) => parseInt(n));
+  return numArray.reduce((acc, curr) => acc + curr, 0);
+
 }
 
 module.exports = add;

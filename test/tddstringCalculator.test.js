@@ -14,4 +14,10 @@ describe("String Calculator", () => {
         });
     });
 
+    describe("Test Case 3: Sum of two comma-separated numbers", () => {
+        test("returns sum of two comma separated numbers", () => {
+            expect(add("1,2")).toBe(3);
+        });
+    });
+
 });
